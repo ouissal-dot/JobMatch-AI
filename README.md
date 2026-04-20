@@ -6,6 +6,12 @@ Built with **Python** and **Streamlit**, this app analyzes your skills and shows
 
 ---
 
+🖥️ Demo
+Try it here: 👉 https://jobmatch-ai-4kjzp7cuhinimytfqkzjvt.streamlit.app/
+
+
+---
+
 ## 🚀 Features
 
 * 🛠️ Select your skills from a dynamic list
