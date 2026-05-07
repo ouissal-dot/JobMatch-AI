@@ -1,22 +1,22 @@
 import streamlit as st
 from jobs_data import jobs
 
-# ── Page config ────────────────────────────────────────────────────
+
 st.set_page_config(
     page_title="JobMatch AI",
     page_icon="💼",
     layout="centered",
 )
 
-# ── Header ─────────────────────────────────────────────────────────
+# Header 
 st.title("💼 JobMatch AI")
 st.markdown("Find jobs that match your skills and experience level.")
 st.divider()
 
-# ── Collect ALL unique skills from the dataset ──────────────────────
+#  the dataset 
 all_skills = sorted({s.lower() for job in jobs for s in job["skills"]})
 
-# ── Inputs ─────────────────────────────────────────────────────────
+# Inputs
 selected_skills = st.multiselect(
     "🛠️ Select your skills",
     options=all_skills,
@@ -29,10 +29,10 @@ level = st.selectbox(
     index=0,
 )
 
-# ── Search button ───────────────────────────────────────────────────
+#  Search button 
 search = st.button("🔍 Find Jobs", use_container_width=True, type="primary")
 
-# ── Results ─────────────────────────────────────────────────────────
+# Results 
 if search:
     if not selected_skills:
         st.warning("Please select at least one skill before searching.")
